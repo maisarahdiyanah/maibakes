@@ -1,7 +1,6 @@
 
 body{
-    background-image: url("../images/background_img.jpeg");
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -9,34 +8,49 @@ header{
     display: flex;
     flex-direction: column;
     background-color: #F1EDEC;
-    /*height: 100px;
-    padding: 15px;*/
-    box-shadow: 0 0 10px 0 #cfcdc8;
+    box-shadow: 0px 0px 10px 0px #cfcdc8;
     align-items: center;
+    margin-top: 30px;
      
       
+}
+
+.upper{
+    background-image: url("../images/background_img.jpeg");
+    background-color: #f1f1f1;
 }
 
 .nav_links{
     display: flex;
     flex-direction: column;
+    line-height: 45px;
     font-size: 20px;
-    margin: 40px 20px;
-    font-family: 'Raleway', sans-serif;
-    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     
 
 }
 
-
-
-.socialmedia li{
+.socialmedia{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.socialmedia li{
+    display: inline-flex;
+    flex-direction: row;
     border-radius: 100%;
-    margin: 30px 2px;
-    float: left;
+    justify-self: center;
+    
+
    
+}
+
+.socialmedia img{
+    width: 25px;
 }
 
 nav li a{
@@ -52,14 +66,19 @@ a:hover{
 .active a{
     text-decoration: none;
     font-weight: bolder;
+    border: white 2px solid;
     
 
 }
 
 .mailogo{
+    display: block;
     width: 200px;
-    position: absolute;
-    left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+    
     
 }
 
@@ -67,7 +86,7 @@ a:hover{
 
 
 main{
-    margin: 100px 50px 50px 50px;
+    margin: 50px;
     border: 2px solid grey;
     
       
@@ -93,31 +112,46 @@ p{
     font-family: 'Raleway', sans-serif;
 }
 
-.floatRight{
-    float: right;
-    margin: 10px;
-    border: #D3D3D3 solid 7px;
-    padding: 2px;
-    width:300px;
-    border-radius: 5%;
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
 }
 
-.floatRight:hover{
-    box-shadow: 10px 10px grey;
+.myphoto{
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.biography{
-    background-color: aliceblue;
-    line-height: 40px;
-    padding: 20px;
-    margin-right: 400px;
+.myphoto img{
+    width: 100%;
     
 }
 
-.Hithere{
-    text-align: center;
-     
+.biography{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: aliceblue;
+    line-height: 40px;
+    
+    
 }
+
+
+
+.Education{
+    background-color: blanchedalmond;
+}
+
+.Travelling{
+    background-color: plum;
+}
+
+.Koko{
+    background-color: #CE9F93;
+}
+
+
 
 .Recipecontent img:nth-child(even){
     border: solid 5px black;
