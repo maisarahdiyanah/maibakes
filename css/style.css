@@ -9,7 +9,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    background-color: #F1EDEC;
+    background-color: #ffffff;
     box-shadow: 0px 0px 10px 0px #cfcdc8;
     align-items: center;
     margin-top: 30px;
@@ -25,10 +25,12 @@ header{
 .nav_links{
     display: flex;
     flex-direction: column;
-    line-height: 45px;
+    line-height: 40px;
     font-size: 20px;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   
     
 
 }
@@ -58,20 +60,54 @@ header{
 nav li a{
     color: black;
     text-decoration: none;
+    letter-spacing: 0;
+    
     
 }
 
-a:hover{
-    text-decoration: underline;
+nav a:hover{
+    letter-spacing: 5px;
+
 }
 
-.active a{
-    text-decoration: none;
+
+
+nav a:after,
+nav a:before {
+  backface-visibility: hidden;
+  border: 1px solid #ffffff;
+  bottom: 0px;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+nav a:hover:after,
+nav a:hover:before {
+  backface-visibility: hidden;
+  border-color: #bc8f8f;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+nav a:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+
+.active{
     font-weight: bolder;
-    border: white 2px solid;
-    
+    border-bottom: #bc8f8f solid 2px;
+    border-width: 70%;
 
-}
+    
+}  
+
 
 .mailogo{
     display: block;
@@ -95,81 +131,202 @@ a:hover{
 
 
 main{
-    margin: 10px;
-    border: 2px solid grey;
+    margin: 20px;
+    
     
       
 }
 
 h1{
-    font-family:'Raleway', sans-serif;
+    font-family:'Dancing Script', serif;
     font-size: 50px;
-    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
 
 }
 
 h2{
     font-family:'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
 }
 h3{
     margin-top: 20px;
 }
 
+h4{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h5{
+    text-decoration: underline;
+}
+
+
+img{
+    width: 300px;
+}
 
 p{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lora', sans-serif;
 }
+
+.welcome{
+    background-image: url(../images/welcome.jpeg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+
+}
+
+.welcome p{
+    padding: 40px;
+    line-height: 30px;
+    text-align: center;
+
+}
+
+
 
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     row-gap: 20px;
 }
 
-.myphoto{
-    grid-column: 1/2;
-    
-}
+
 
 .myphoto img{
     width: 100%;
+    grid-column: 1/4;
     
+}
+
+.intro{
+    margin-bottom: 20px;
+    line-height: 40px;
 }
 
 .biography{
-    grid-column: 2/4;
+    grid-column: 1/4;
     background-color: aliceblue;
-    line-height: 40px;
-    
+    line-height: 30px;
+    font-family: 'Lora', serif;
     
 }
-
-
+.biography p{
+    margin: 30px;
+}
 
 .Education{
     grid-column: 1/3;
     background-color: blanchedalmond;
+    line-height: 30px;
+    
+}
+
+.Education h2{
+    text-align: center;
+    margin-top: 30px;
+}
+.Education p{
+    margin:30px;
 }
 
 .projects{
     text-align: center;
-    grid-column:3/4;
+    grid-column:1/4;
 }
 
 .Travelling{
-    background-color: plum;
+    background-color: #ffe4e1;
     grid-column: 1/4;
+    line-height: 30px;
 }
 
 .Koko{
     background-color: #CE9F93;
-    grid-column: 1/3;
+    grid-column: 1/4;
 }
 
 
 
+
+.restaurants{
+    margin: 100px 10px 100px 10px;
+    border: solid 5px grey;
+}
+
+
+
+.joeimages img{
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5% ;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+    padding: 2px;
+}
+
+
+
+
+.joeimages img:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+  }
+
+
+
+.CWimages img{
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5% ;
+    box-shadow: 20px 20px #ffe4e1;
+    transition: all .4s ease;
+    padding: 2px;
+
+}
+  
+.CWimages img:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px #fadadd;
+}
+
+
+.KBimages img{
+    margin: 20px;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 5% ;
+    box-shadow: 20px 20px rgba(0,0,0,.15);
+    transition: all .4s ease;
+    padding: 2px;
+}
+
+.KBimages img:hover{
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+
+.Recipe_section{
+    padding: 50px;
+    background-color: #ca9191ce;
+    color: #ffffff;
+    
+}
+
+.Recipe_section p{
+    margin-top: 50px;
+    line-height: 20px;
+    text-align: center;
+}
 .Recipecontent img:nth-child(even){
     border: solid 5px black;
     margin: 10px;
@@ -196,65 +353,42 @@ p{
   }
 
 
-.JoeMuerSeafood{
-    margin-top: 100px;
-}
 
-.JoeMuerSeafood img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
-    transition: all .4s ease;
-    padding: 2px;
 
-}
 
-.JoeMuerSeafood img:hover {
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px rgba(0,0,0,.25);
-  }
 
-.CommonWealth{
-    margin-top: 100px;
-}
 
-.CommonWealth img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px #ffe4e1;
-    transition: all .4s ease;
-    padding: 2px;
 
-}
-  
-.CommonWealth img:hover {
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px #fadadd;
+
+.ForSaleSection{
+    
+    padding: 50px;
+    background-image: url(../images/forsale.jpeg);
+    background-color: #f1f1f1;
+    min-height: 250px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
 }
 
 
-.KimchiBox{
-    margin-top: 100px;
+
+.ForSaleSection p{
+    margin-top: 50px;
+    
+    text-align: center;
 }
 
-.KimchiBox img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
-    transition: all .4s ease;
-    padding: 2px;
+.ForSale{
+    padding: 20px;
+    margin: 10px;
+    border: solid 2px grey;
+    
 }
 
-.KimchiBox img:hover{
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px rgba(0,0,0,.25);
-}
 
 .ForSale img{
     margin: 20px;
@@ -278,6 +412,7 @@ p{
     box-shadow: 20px 20px rgba(0,0,0,.15);
     transition: all .4s ease;
     padding: 2px;
+    width: 150px;
 }
 
 .CustomerScreenshots img:nth-child(even){
@@ -288,6 +423,7 @@ p{
     box-shadow: 20px 20px #ffe4e1;
     transition: all .4s ease;
     padding: 2px;
+    width: 150px;
 
 }
 .CustomerScreenshots img:nth-child(odd):hover{
@@ -306,10 +442,13 @@ p{
 
 form {
     border: 3px solid #f1f1f1;
+    margin-top: 50px;
   }
   
   legend{ 
-    font-size: 90%;
+    
+    font-size: 100%;
+    font-weight: bolder;
     font-style:italic;
     text-transform: uppercase;
     text-align: center;
@@ -357,3 +496,52 @@ footer{
     border: 2px solid grey;
 	margin: 10px 50px;
 }
+
+@media screen and (min-width: 700px){
+
+    nav{
+        width: 80%;
+        padding: 20px;
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        
+    }
+
+    .myphoto{
+        grid-column: 1/4;
+        grid-row: 1/2;
+        width: 80%;
+        background-color: aliceblue;
+        
+    }
+    
+    .biography{
+        grid-column: 4/7;
+        grid-row: 1/2;
+        max-height: 600px;
+        overflow:scroll;
+    }
+
+    .Education{
+        grid-column: 1/5;
+        grid-row: 2/3;
+        overflow: scroll;
+    }
+
+    .projects{
+        grid-column: 5/7;
+        grid-row: 2/3;
+    }
+    .Travelling{
+        grid-column: 1/7;
+    }
+}
+
