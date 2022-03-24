@@ -625,7 +625,12 @@ footer{
     .Travelling{
         grid-column: 1/7;
     }
-
-    
 }
+    
 
+
+@media screen and (prefers-reduced-motion: reduce){
+    .mailogo{
+        animation: none;
+    }
+}
