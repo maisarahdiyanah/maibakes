@@ -168,11 +168,15 @@ h3{
 
 h4{
     margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
+    font-family: "Raleway", sans-serif;
 }
 
 h5{
     text-decoration: underline;
+    font-family: "Raleway", sans-serif;
+    margin-bottom: 10px;
 }
 
 
@@ -184,22 +188,7 @@ p{
     font-family: 'Lora', sans-serif;
 }
 
-.welcome{
-    background-image: url(../images/welcome.jpeg);
-    background-color: #ffffff;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 350px;
 
-}
-
-.welcome p{
-    padding: 40px;
-    line-height: 30px;
-    text-align: center;
-
-}
 
 
 /* ----------------- About me page --------------------------*/
@@ -216,6 +205,7 @@ p{
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
@@ -224,16 +214,11 @@ p{
 
    height: 100%;
    object-fit: cover;
-   
+   width: 90%;
+   padding: 20px;
+   border: solid 1px #CDC8CB;
 }
 
-/*.imageresize{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 300px;
-    height: 400px;
-}*/
 
 .intro{
     margin-bottom: 20px;
@@ -370,79 +355,91 @@ p{
 
 
 /*---------------------------- Home page ------------------------------*/
+
+
+.welcome{
+    background-image: url('../images/mainbg.png');
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;    
+
+}
+
+.words{
+    padding-top: 70px;
+}
+
+.welcome h1{
+    margin-top: 0;
+    padding-top: 40px;
+    font-weight: bolder;
+    font-size: 45px;
+    margin-left:50px;
+    margin-right: 50px;
+    color:white;
+}
+.welcomep p{
+    padding: 40px;
+    line-height: 25px;
+    text-align: center;
+    
+    font-weight: bolder;
+    background: #faebd7;
+
+}
+
+
+
+.container2{
+    display: grid;
+    
+}
+
+
 .restaurants{
-    margin: 100px 10px 100px 10px;
-    border: solid 5px grey;
+    margin: 20px 25px 20px 25px;
+    border: solid 1px #CDC8CB;
+    padding: 20px;
+    align-self:center;
 }
 
+.restaurants img{
+    width: 30%;
+    margin: 5px;
+}
 
+.restaurants h3{
+    font-size: 90%;
+    font-weight:bolder;
+}
 
+.restaurants p{
+    font-size: 90%;
+    margin-top: 30px;
+    line-height: 20px;
+    padding: 20px;
+}
+
+.joeimages{
+    text-align:center;
+
+}
 .joeimages img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
-    transition: all .4s ease;
-    padding: 2px;
+    width: 20%;
+
+}
+
+.joeimages, .CWimages, .KBimages, .PRimages, .SHimages, .DHimages, .Tatteimages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
 }
 
 
-
-
-.joeimages img:hover {
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px rgba(0,0,0,.25);
-  }
-
-
-
-.CWimages img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px #ffe4e1;
-    transition: all .4s ease;
-    padding: 2px;
-
-}
-  
-.CWimages img:hover {
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px #fadadd;
-}
-
-
-.KBimages img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px rgba(0,0,0,.15);
-    transition: all .4s ease;
-    padding: 2px;
-}
-
-.KBimages img:hover{
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px rgba(0,0,0,.25);
-}
-
-.PRimages img{
-    margin: 20px;
-    position: relative;
-    border: 2px solid black;
-    border-radius: 5% ;
-    box-shadow: 20px 20px #ffe4e1;
-    transition: all .4s ease;
-    padding: 2px;
-}
-
-.PRimages img:hover{
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-    box-shadow: 10px 10px #fadadd;
-}
 
 
 
@@ -467,20 +464,17 @@ p{
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
+    
 }
 
 
-.Recipecontent img:hover {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    animation-name: example;
-    animation-duration: 0.25s;
-    border-left: 8px solid #D3D3D3;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  .Recipecontent img:hover{
+    opacity: 1;
+    transition: 1s ease;
   }
 
-
-.Brownies, .Makmur, .WhiteChoc, .Honey, .Onde, .Scones, .Lotus{
+.Brownies, .Makmur, .WhiteChoc, .Honey, .Onde, .Scones, .Lotus, .BMuffin{
     display: flex;
     flex-basis: 450px;
     flex-direction:column;
@@ -500,16 +494,21 @@ p{
 }
 
 
+.Recipecontent ul, .Recipecontent ol{
+    list-style: square;
+    padding: 5px 20px 5px 20px;
+    line-height: 20px;
+    font-family: 'Lora', sans-serif;
+}
 
 
-
-
+.h2div h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
 
 
 /*-----------------------------------------For Sale page --------------------------------------------*/
-.ForSalePage{
-     background-color: #F0F3F6;
-}
 
 
 
@@ -523,7 +522,7 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #414141;
+    color: rgb(85, 85, 85);
     
 }
 
@@ -538,7 +537,7 @@ p{
 }
 
 .ForSale{
-    padding: 20px;
+    padding-bottom: 40px;
     background-color: #F0F3F6;
     display: flex;
     flex-direction: column;
@@ -576,10 +575,10 @@ p{
 
 .ForSale img{
     margin: 20px;
-    border: black solid 2px;
+    border: rgb(85, 85, 85) solid 2px;
     border-radius: 0%;
     padding: 5px;
-    background-color: #bc8f8f;
+    background-color: #ffe4e1;
     width: 250px;
 }
 
@@ -594,7 +593,7 @@ p{
     padding: 20px;
     margin-left: 40px;
     margin-right: 40px;
-    border-top: solid 1px #414141;
+    
 }
 
 .CustomerScreenshots{
@@ -698,7 +697,8 @@ form {
 
 footer{
     padding: 20px 50px;
-    background-color: #E4AD9B;
+    background-color: #EDA8A8;
+    text-align: center;
 }
 
 
@@ -718,11 +718,56 @@ footer{
     }
 
     .container{
-        display: grid;
         grid-template-columns: repeat(10, 10vw);
         
         
     }
+
+    .container2{
+        grid-template-columns: repeat(12, 8.3vw);
+
+    }
+
+    #JoeMuer{
+        grid-column: 1/13;
+        grid-row: 1/2;
+        
+    }
+
+    #Commonwealth{
+        grid-column: 1/7;
+
+        grid-row: 2/4;
+        
+    }
+
+    #KimchiBox{
+        grid-column: 7/13;
+        grid-row: 2/6;
+    }
+
+    #PacificRim{
+        grid-column: 1/7;
+        grid-row: 4/7;
+    }
+
+    #StrayHen{
+        grid-column: 7/13;
+        grid-row: 6/7;
+
+    }
+
+    #Tatte{
+        grid-column: 1/6;
+        grid-row: 7/8;
+        
+    }
+
+    #DripHouse{
+        grid-column: 6/13;
+        grid-row: 7/8;
+    }
+
 
     .myphoto{
         grid-column: 2/5;
@@ -731,10 +776,6 @@ footer{
         
     }
     
-    /*.imageresize{
-        width: 75%;
-        height: 50%
-    }*/
 
     .biography{
         grid-column: 5/11;
@@ -809,13 +850,13 @@ footer{
 
     .kokoimg{
         grid-column: 2/6;
-        /* grid-row: 6/7; */
+        
     }
     
     .kokoimg2{
         grid-column: 6/10;
     }
-    .Brownies, .Makmur, .WhiteChoc, .Honey, .Onde, .Scones, .Lotus{
+    .Brownies, .Makmur, .WhiteChoc, .Honey, .Onde, .Scones, .Lotus, .BMuffin{
         flex-basis: 300px;
     }
 
@@ -900,6 +941,12 @@ footer{
         grid-row: 3/4;
         margin-top: 50px;
     }
+
+
+
+.Recipecontent img{
+    opacity: 0.8;
+}
 .flip-card{
     background-color: transparent;
     width: 300px;
@@ -934,8 +981,8 @@ footer{
   }
 
 .flip-card-back {
-    background-color: #bc8f8f;
-    color: white;
+    background-color: #ffe4e1;
+    color: rgb(85, 85, 85);
     transform: rotateY(180deg);
 }
 
@@ -975,8 +1022,8 @@ footer{
   }
 
 .flip-card-back2 {
-    background-color: #bc8f8f;
-    color: white;
+    background-color: #ffe4e1;
+    color: rgb(85, 85, 85);
     transform: rotateY(180deg);
 }
 
